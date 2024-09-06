@@ -16,10 +16,7 @@ def gaussian(x,sigma,mu):
 x = np.linspace(-10,10,100)
 # Then we can find the results of our gaussian (y) for each x from the array above and store them as a list
 # To make list [] then use a for loop to iterate through array 
-y_0 = [gaussian(x_i,3,0) for x_i in x] 
-
-# Normalizing y
-y = [i/max(y_0) for i in y_0]
+y = [gaussian(x_i,3,0) for x_i in x] 
 
 # Now we can plot using pyplot
 plt.plot(x,y)
