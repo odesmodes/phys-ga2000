@@ -8,7 +8,7 @@ from matplotlib import pyplot as plt
 
 # Define Gaussian function
 def gaussian(x,sigma,mu):
-    return (1/(np.sqrt(2 * np.pi * sigma))) * np.e**-((x-mu)**2/(2 * sigma**2))
+    return (1/(np.sqrt(2 * np.pi * sigma**2))) * np.e**-((x-mu)**2/(2 * sigma**2))
 #return not print so that we can do stuff with it later ie plot
 
 # Setup plotting function (to plot we need x and y)
