@@ -30,4 +30,3 @@ difference = -(float_calc - 100.98763)
 print(float_calc)
 print(difference)
 
-
