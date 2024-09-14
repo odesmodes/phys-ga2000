@@ -29,3 +29,28 @@ print(M)
 
 
 # VERSION TWO: WITHOUT A FOR LOOP
+
+# Using np.meshgrid
+
+arr = np.arange(-L,L+1)
+
+# Using unpacking for np.meshgrid
+
+i,j,k = np.meshgrid(arr,arr,arr)
+
+# Calculate distance
+
+dist = np.sqrt(i**2 + j**2 + k**2) 
+zero_rm = dist != 0 #removing zero from the distance)
+filt_dist = dist[zero_rm] #applying the zero removal to the distance so that it is back to numbers and not booleans
+
+filt_i = i[zero_rm] #we need our i's and j's and k's to be the same "length" as the distance
+filt_j = j[zero_rm]
+filt_k = k[zero_rm]
+
+parity = (filt_i +filt_j + filt_k)%2 #to figure out the sign of M
+
+M = np.where(parity == 0, -1/filt_dist, 1/filt_dist).sum() #where par is even then do second argument, if not do third argument, then sum over all of the i,j,k
+
+print(M)
+
