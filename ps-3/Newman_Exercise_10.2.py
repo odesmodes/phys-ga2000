@@ -77,6 +77,6 @@ plt.xlabel("Time")
 plt.ylabel("Number of Atoms")
 plt.legend(['Bi_213', 'Pb', 'Tl', 'Bi_209'])
 plt.title('Decay of Bi_213 Isotope')
-plt.show()
+#plt.show()
 plt.savefig('DecayGraph.png')
 

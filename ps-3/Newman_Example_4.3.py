@@ -36,8 +36,8 @@ plt.scatter(matrix_size, discrete_list) # Make a scatter plot of above
 #plt.scatter(matrix_size, dot_list)
 plt.title('Matrix Multiplication Time as N increases: Explicit')
 plt.xlabel('Matrix Size')
-plt.ylabel('Time')
-plt.show()
+plt.ylabel('time')
+#plt.show()
 plt.savefig('Q1_explicit.png')
 
 plt.figure(2)
@@ -47,8 +47,8 @@ plt.scatter(matrix_size, dot_list)
 plt.title('Matrix Multiplication Time as N increases: Dot Function')
 plt.xlabel('Matrix Size')
 plt.ylabel('Time')
-plt.show()
-plt.savefig('Q1_dot.png')
+plt.savefig('Q1_dot.png')   
+#plt.show()
 
 
  
