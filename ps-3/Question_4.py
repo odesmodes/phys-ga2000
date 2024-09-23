@@ -20,8 +20,8 @@ gauss = [gaussian(np.std(y), np.mean(y), t_i) for t_i in t]
 
 plt.plot(t, gauss)
 plt.hist(y, bins = 30, density = True)
-plt.show()
 plt.savefig('Question_4_part1.png')
+plt.show()
 
 # Set initial parameters
 N_values = [10, 20, 50, 100, 200, 500, 1000, 1500]  # Different sample sizes
