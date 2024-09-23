@@ -21,6 +21,7 @@ gauss = [gaussian(np.std(y), np.mean(y), t_i) for t_i in t]
 plt.plot(t, gauss)
 plt.hist(y, bins = 30, density = True)
 plt.show()
+plt.savefig('Question_4_part1.png')
 
 # Set initial parameters
 N_values = [10, 20, 50, 100, 200, 500, 1000, 1500]  # Different sample sizes
@@ -79,5 +80,5 @@ plt.xlabel('Sample Size (N)')
 plt.ylabel('Kurtosis')
 
 plt.tight_layout()
-plt.savefig('Question_4.png')
+plt.savefig('Question_4_part2.png')
 plt.show()
