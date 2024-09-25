@@ -54,7 +54,7 @@ def cv(T):
 temp_range = np.linspace(5,500,1000)
 cv_res = [cv(i) for i in temp_range]
 
-plt.plot(temp_range, cv_res)
-plt.xlabel('Temperature Range')
-plt.ylabel('Cv(T)')
-plt.savefig('Cv(T).png')
+#plt.plot(temp_range, cv_res)
+#plt.xlabel('Temperature Range')
+#plt.ylabel('Cv(T)')
+#plt.savefig('Cv(T).png')
