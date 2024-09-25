@@ -43,7 +43,7 @@ def cv(T):
     k = 1.38e-23 # J*K^-1
     N=50
 
-    linear = 9 * V * rho * k # This is the linear part of Cv
+    linear = 9 * V * rho * k * (T/debye)**3 # This is the linear part of Cv
     x,w = gausswab(N,0,debye/T) # Getting the weights and x values (to evaluate the function at point x and multiply by the weights
     s=0
     for k in range(N): # summation/integral
