@@ -34,15 +34,14 @@ def f(x):
 
 # Finally. Writing the python function cv(T)
 # Part a
-def cv(T):
+def cv(T,N):
 
     # Parameters that they gave in the problem
     rho = 6.022e28 #m^-3
     debye = 428 # K
     V = 1e-6 # cm -> m
     k = 1.38e-23 # J*K^-1
-    N = 50
-
+   
     linear = 9 * V * rho * k * (T/debye)**3 # This is the linear part of Cv
     x,w = gausswab(N,0,debye/T) # Getting the weights and x values (to evaluate the function at point x and multiply by the weights
     s=0
@@ -54,11 +53,31 @@ def cv(T):
 # part b
 
 temp_range = np.linspace(5,500,1000)
-cv_res = [cv(i) for i in temp_range]
+cv_res = [cv(i,50) for i in temp_range]
 
-plt.plot(temp_range, cv_res)
+#plt.plot(temp_range, cv_res)
+#plt.xlabel('Temperature Range [K]')
+#plt.ylabel('Cv(T) [J/K]')
+#plt.savefig('Cv(T).png')
+#plt.show()
+
+# part c: Test the convergence by evaluating the choices N = 10,20,30,40,50,60,70
+# using a for loop to do this easier
+
+nrange = np.arange(10,80,10)
+
+for i in nrange:
+    cv_res_2 = []
+    for j in temp_range:
+        cv_res_2.append(cv(j,i))
+    plt.plot(temp_range, cv_res_2)
+
+plt.legend(nrange)
+
 plt.xlabel('Temperature Range [K]')
 plt.ylabel('Cv(T) [J/K]')
-plt.savefig('Cv(T).png')
-plt.show()
+plt.savefig('convergence_test.png')
+#plt.show()
 
+
+        
