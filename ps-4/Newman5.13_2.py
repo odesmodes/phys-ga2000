@@ -2,6 +2,7 @@ import numpy as np
 import math as m
 from gaussxw import gaussxw, gaussxwab
 
+# part c
 def H(x,n):
     if n == 0:
         return 1
@@ -38,3 +39,4 @@ for k in range(N):
     s+=w[k]*cov(x[k],n)
 print(np.sqrt(s))
     
+# part d
