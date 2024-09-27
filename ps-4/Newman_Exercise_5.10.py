@@ -1,5 +1,5 @@
 import numpy as np
-from Newman_Exercise_5_9 import gaussxw, gausswab 
+from gaussxw import gaussxw, gausswab 
 from matplotlib import pyplot as plt
 
 mass = 1 
