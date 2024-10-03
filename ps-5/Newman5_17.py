@@ -14,6 +14,10 @@ for a in a_range:
     for x in x_range:
         res.append(integrand(x,a))
     plt.plot(x_range,res)
+plt.title("Integrand")
+plt.xlabel("x")
+plt.ylabel("Value of Gamma(x)")
+plt.legend(a_range)
 plt.savefig("Q2.png")
 #plt.show()
 #end part A
