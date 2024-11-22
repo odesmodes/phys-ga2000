@@ -144,10 +144,11 @@ tpoints = np.arange(a,b,h)
 for mu in [1,2,4]:
     r = np.array([1.0,0.0],float)
     xpoints, ypoints = calculate3(tpoints, r, h)
-    plt.title(f"Van der Pol Phase Space: mu = {mu}")
+    plt.title(f"Van der Pol Phase Space: mu = 1,2,4")
     plt.xlabel("x")
     plt.ylabel("dx/dt")
-    plt.plot(xpoints,ypoints)
+    plt.plot(xpoints,ypoints, label= f"mu = {mu}")
+plt.legend()
 plt.savefig('plot6.png')
 plt.close()
 
