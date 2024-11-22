@@ -85,7 +85,7 @@ plt.title("Second order: x = 1")
 plt.xlabel("time (t)")
 plt.ylabel("Amplitude (y)")
 plt.plot(tpoints,xpoints)
-plt.show()
+plt.savefig('plot1.png')
 plt.close()
 
 #part B
@@ -97,7 +97,7 @@ plt.title("Second order: x = 2")
 plt.xlabel("time (t)")
 plt.ylabel("Amplitude (y)")
 plt.plot(tpoints,xpoints)
-plt.show()
+plt.savefig('plot2.png')
 plt.close()
 
 
@@ -108,7 +108,7 @@ plt.title("Second order, x^3: x = 1")
 plt.xlabel("time (t)")
 plt.ylabel("Amplitude (y)")
 plt.plot(tpoints,xpoints)
-plt.show()
+plt.savefig('plot3.png')
 plt.close()
 
 r = np.array([2.0,0.0],float)
@@ -118,7 +118,7 @@ plt.title("Second order, x^3: x = 2")
 plt.xlabel("time (t)")
 plt.ylabel("Amplitude (y)")
 plt.plot(tpoints,xpoints)
-plt.show()
+plt.savefig('plot4.png')
 plt.close()
 
 
@@ -128,7 +128,7 @@ plt.title("Second order, x^3: Phase Space")
 plt.xlabel("x")
 plt.ylabel("dx/dt")
 plt.plot(xpoints,ypoints)
-plt.show()
+plt.savefig('plot5.png')
 plt.close()
 
 #part E
@@ -148,6 +148,6 @@ for mu in [1,2,4]:
     plt.xlabel("x")
     plt.ylabel("dx/dt")
     plt.plot(xpoints,ypoints)
-    plt.show()
-    plt.close()
+plt.savefig('plot6.png')
+plt.close()
 
